@@ -1,0 +1,38 @@
+package queuebyron;
+import java.util.LinkedList;
+import java.util.Queue;
+/**
+ *
+ * @author Pc
+ */
+
+
+
+
+public class Queueex {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    static Queue <String> colaPreconstruida = new LinkedList<>();
+    
+    public static boolean busquedaEnQueue(String valorBuscado){
+        if (colaPreconstruida.contains(valorBuscado))
+                return true;
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        colaPreconstruida.add("Mendoza");
+        colaPreconstruida.add("Garcia");
+        colaPreconstruida.add("Byron");
+        
+        if (busquedaEnQueue("Javier"))
+            System.out.println("Javier SI esta en la cola");
+        else
+            System.out.println("Javier NO esta en la cola");
+ 
+        
+    }   
+}
